@@ -1,0 +1,154 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "token_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "beneficiary_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "releaseTime_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "beneficiary",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "release",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "releaseTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "token",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "A token holder contract that will allow a beneficiary to extract the tokens after a given release time. Useful for simple vesting schedules like \"advisors get all of their tokens after 1 year\".",
+			"kind": "dev",
+			"methods": {
+				"beneficiary()": {
+					"details": "Returns the beneficiary that will receive the tokens."
+				},
+				"constructor": {
+					"details": "Deploys a timelock instance that is able to hold the token specified, and will only release it to `beneficiary_` when {release} is invoked after `releaseTime_`. The release time is specified as a Unix timestamp (in seconds)."
+				},
+				"release()": {
+					"details": "Transfers tokens held by the timelock to the beneficiary. Will only succeed if invoked after the release time."
+				},
+				"releaseTime()": {
+					"details": "Returns the time when the tokens are released in seconds since Unix epoch (i.e. Unix timestamp)."
+				},
+				"token()": {
+					"details": "Returns the token being held."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ERC20/utils/TokenTimelock.sol": "TokenTimelock"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ERC20/IERC20.sol": {
+			"keccak256": "0xb956faad4527f714d42a1c63bdf8a27ddd991cfe73ffaa80f37fa6d657713773",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a3a7b545782c733e2e34d39ca295ead3fc6788ee4618e0402c3c1c57acd1fd99",
+				"dweb:/ipfs/QmbWsBJWTDEHsWVmmQrTEKwx2RPg5baRhRUFdrG7b4BxgM"
+			]
+		},
+		"ERC20/utils/Address.sol": {
+			"keccak256": "0x4f73eedf878079f3c11b05bb9db39c789ae782c0c1a15a8a31ad36aa7047a32f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c23c79bf4124e0b203677c5ab55ce73d8faf43f0d5c49b071c9f9f16fee74249",
+				"dweb:/ipfs/QmNsMhnyeFS22LXmGGG7j6eto36bz8SEGbfDGPVu1EZcB8"
+			]
+		},
+		"ERC20/utils/SafeERC20.sol": {
+			"keccak256": "0xe7ea469473d3e8da2f854fc6b82f86cefb2ab99d5228cf0e75862babfb2c079f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a0f564b42d0c1eaf6674393da458e4656c2ea509664c93329a12aa9c4bfa3e4f",
+				"dweb:/ipfs/QmTWigoPqfh1cXnQT9uiAQR8JqT9GZDGZx4Pn6WcybA7zi"
+			]
+		},
+		"ERC20/utils/TokenTimelock.sol": {
+			"keccak256": "0x15bbcbc5db8a9c89e51e9abb1d91ed9b4aebf69a5d47e46c64680ab7cf0e48e6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dff046924bf4141e5a80dafd0c9e92ad996967117f61820e5090e651803bf007",
+				"dweb:/ipfs/QmeP9GPSckkVPHqFeUUk9QYfLnxCV7eUqptkgWJGM7dNRt"
+			]
+		}
+	},
+	"version": 1
+}

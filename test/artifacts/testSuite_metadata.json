@@ -1,0 +1,52 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "testSetup",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"test/Round_1_test.sol": "testSuite"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"test/Round_1_test.sol": {
+			"keccak256": "0x9ce338c597c3d1ff369dcd419523fe8fe0c8e62803d45e7e841d97873cca4140",
+			"urls": [
+				"bzz-raw://6cd1d1cabf0d63d40a0b2eceb264259f9781163ef4f913da79befebb8300ca30",
+				"dweb:/ipfs/QmefrQuqmqSBBi1LNLoq6CVeigE3hdY3w6M9JfZjLLpFBB"
+			]
+		}
+	},
+	"version": 1
+}
